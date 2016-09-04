@@ -61,4 +61,12 @@ abstract class QuickCheckHeap extends Properties("Heap") with IntHeap {
     val biggerNum = Math.max(a, b)
     minH1 == biggerNum
   }
+
+  property("add3delmin_check") = forAll { (a: Int, b: Int, c: Int) =>
+    val h = insert(a, insert(b, insert(c, empty)))
+    val h1 = deleteMin(h)
+    val sortedElems = Vector(a, b, c).sorted
+    val middle = sortedElems(1)
+    middle == findMin(h1)
+  }
 }
