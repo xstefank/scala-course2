@@ -52,4 +52,13 @@ abstract class QuickCheckHeap extends Properties("Heap") with IntHeap {
     val m_min = findMin(m)
     m_min == findMin(h1) || m_min == findMin(h2)
   }
+
+  property("add2delMin_minBigger") = forAll { (a: Int, b: Int) =>
+    val h = insert(a, insert(b, empty))
+    val h1 = deleteMin(h)
+    val minH1 = findMin(h1)
+
+    val biggerNum = Math.max(a, b)
+    minH1 == biggerNum
+  }
 }
