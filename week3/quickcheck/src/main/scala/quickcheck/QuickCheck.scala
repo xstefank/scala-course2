@@ -26,5 +26,26 @@ abstract class QuickCheckHeap extends Properties("Heap") with IntHeap {
     findMin(insert(m, h)) == m
   }
 
+  property("ins2min_Less") = forAll { (a: Int, b: Int) =>
+    val h = insert(b, insert(a, empty))
+    findMin(h) == Math.min(a, b)
+  }
+
+  property("insEmptydelmin_Empty") = forAll { (a: Int) =>
+    val h = deleteMin(insert(a, empty))
+    isEmpty(h)
+  }
+
+  property("remRec_ordSeq") = forAll { (h: H) =>
+
+    def getHeapAsOrderedList(h: H) : List[Int] = {
+      if (isEmpty(h)) List()
+      else findMin(h) :: getHeapAsOrderedList(deleteMin(h))
+    }
+
+    val list = getHeapAsOrderedList(h)
+    list == list.sorted
+  }
+
   
 }
