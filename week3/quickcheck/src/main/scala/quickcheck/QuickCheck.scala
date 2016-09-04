@@ -47,5 +47,9 @@ abstract class QuickCheckHeap extends Properties("Heap") with IntHeap {
     list == list.sorted
   }
 
-  
+  property("meld2heaps_min") = forAll { (h1: H, h2: H) =>
+    val m = meld(h1, h2)
+    val m_min = findMin(m)
+    m_min == findMin(h1) || m_min == findMin(h2)
+  }
 }

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5c7b733-5fb2-4f2f-80d9-66e18efce5be" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/quickcheck/QuickCheck.scala" afterPath="$PROJECT_DIR$/src/main/scala/quickcheck/QuickCheck.scala" />
     </list>
     <ignored path="quickcheck.iws" />
@@ -45,8 +44,8 @@
       <file leaf-file-name="QuickCheck.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/quickcheck/QuickCheck.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="665">
-              <caret line="49" column="2" selection-start-line="49" selection-start-column="2" selection-end-line="49" selection-end-column="2" />
+            <state relative-caret-position="645">
+              <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -367,12 +366,12 @@
       <option name="presentableId" value="Default" />
       <updated>1472931522576</updated>
       <workItem from="1472931527536" duration="1493000" />
-      <workItem from="1472987897651" duration="6781000" />
+      <workItem from="1472987897651" duration="7427000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8274000" />
+    <option name="totallyTimeSpent" value="8920000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="1" />
@@ -440,8 +439,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/quickcheck/QuickCheck.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="49" column="2" selection-start-line="49" selection-start-column="2" selection-end-line="49" selection-end-column="2" />
+        <state relative-caret-position="645">
+          <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="26" />
           <folding />
         </state>
       </provider>
