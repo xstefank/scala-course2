@@ -51,4 +51,39 @@ class CalculatorSuite extends FunSuite with ShouldMatchers {
     assert(resultRed2() == "red")
   }
 
+  test("computeDelta => x^2 + 5x + 6 = 0") {
+    val a = Var(1.0)
+    val b = Var(5.0)
+    val c = Var(6.0)
+    val result = Polynomial.computeDelta(a, b, c)
+    assert(result() == 1)
+  }
+
+  test("computeDelta => 5x² + 6x + 1 = 0") {
+    val a = Var(5.0)
+    val b = Var(6.0)
+    val c = Var(1.0)
+    val result = Polynomial.computeDelta(a, b, c)
+    assert(result() == 16)
+  }
+
+  test("computeSolutions => x^2 + 5x + 6 = 0") {
+    val a = Var(1.0)
+    val b = Var(5.0)
+    val c = Var(6.0)
+    val delta = Polynomial.computeDelta(a, b, c)
+    val result = Polynomial.computeSolutions(a, b, c, delta)
+    assert(result() == Set(-3.0, -2.0))
+  }
+
+  test("computeSolutions => 5x² + 6x + 1 = 0") {
+    val a = Var(5.0)
+    val b = Var(6.0)
+    val c = Var(1.0)
+    val delta = Polynomial.computeDelta(a, b, c)
+    val result = Polynomial.computeSolutions(a, b, c, delta)
+    assert(result() == Set(-0.2, -1.0))
+  }
+
+
 }
